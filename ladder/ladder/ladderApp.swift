@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct ladderApp: App {
+
+    @StateObject var appStore = AppStore(state: .init(), reducer: appReducer(state:action:))
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ProfileListView()
+                .environmentObject(appStore)
         }
     }
 }
