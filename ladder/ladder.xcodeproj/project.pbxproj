@@ -32,7 +32,36 @@
 		51FE0185254B4B0000AD317B /* KeychainStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51FE016F254B4B0000AD317B /* KeychainStore.swift */; };
 		51FE0193254B4B7D00AD317B /* ProfilesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51FE0191254B4B7D00AD317B /* ProfilesViewModel.swift */; };
 		51FE0194254B4B7D00AD317B /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51FE0192254B4B7D00AD317B /* ProfileViewModel.swift */; };
+		51FE01B9254B687B00AD317B /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51FE01A0254B667A00AD317B /* WidgetKit.framework */; };
+		51FE01BA254B687B00AD317B /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51FE01A2254B667A00AD317B /* SwiftUI.framework */; };
+		51FE01BD254B687B00AD317B /* LadderWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51FE01BC254B687B00AD317B /* LadderWidget.swift */; };
+		51FE01BF254B687B00AD317B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51FE01BE254B687B00AD317B /* Assets.xcassets */; };
+		51FE01C3254B687B00AD317B /* LadderWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 51FE01B8254B687B00AD317B /* LadderWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		51FE01C1254B687B00AD317B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 51FE0131254B4A2800AD317B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 51FE01B7254B687B00AD317B;
+			remoteInfo = LadderWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		51FE01B0254B667C00AD317B /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				51FE01C3254B687B00AD317B /* LadderWidgetExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		51FE0139254B4A2800AD317B /* ladder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ladder.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -62,6 +91,12 @@
 		51FE016F254B4B0000AD317B /* KeychainStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainStore.swift; sourceTree = "<group>"; };
 		51FE0191254B4B7D00AD317B /* ProfilesViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilesViewModel.swift; sourceTree = "<group>"; };
 		51FE0192254B4B7D00AD317B /* ProfileViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		51FE01A0254B667A00AD317B /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		51FE01A2254B667A00AD317B /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		51FE01B8254B687B00AD317B /* LadderWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = LadderWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		51FE01BC254B687B00AD317B /* LadderWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LadderWidget.swift; sourceTree = "<group>"; };
+		51FE01BE254B687B00AD317B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		51FE01C0254B687B00AD317B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +107,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		51FE01B5254B687B00AD317B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				51FE01BA254B687B00AD317B /* SwiftUI.framework in Frameworks */,
+				51FE01B9254B687B00AD317B /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -79,6 +123,8 @@
 			isa = PBXGroup;
 			children = (
 				51FE013B254B4A2800AD317B /* ladder */,
+				51FE01BB254B687B00AD317B /* LadderWidget */,
+				51FE019F254B667A00AD317B /* Frameworks */,
 				51FE013A254B4A2800AD317B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -87,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				51FE0139254B4A2800AD317B /* ladder.app */,
+				51FE01B8254B687B00AD317B /* LadderWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -236,6 +283,25 @@
 			path = "view model";
 			sourceTree = "<group>";
 		};
+		51FE019F254B667A00AD317B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				51FE01A0254B667A00AD317B /* WidgetKit.framework */,
+				51FE01A2254B667A00AD317B /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		51FE01BB254B687B00AD317B /* LadderWidget */ = {
+			isa = PBXGroup;
+			children = (
+				51FE01BC254B687B00AD317B /* LadderWidget.swift */,
+				51FE01BE254B687B00AD317B /* Assets.xcassets */,
+				51FE01C0254B687B00AD317B /* Info.plist */,
+			);
+			path = LadderWidget;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -246,15 +312,34 @@
 				51FE0135254B4A2800AD317B /* Sources */,
 				51FE0136254B4A2800AD317B /* Frameworks */,
 				51FE0137254B4A2800AD317B /* Resources */,
+				51FE01B0254B667C00AD317B /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				51FE01C2254B687B00AD317B /* PBXTargetDependency */,
 			);
 			name = ladder;
 			productName = ladder;
 			productReference = 51FE0139254B4A2800AD317B /* ladder.app */;
 			productType = "com.apple.product-type.application";
+		};
+		51FE01B7254B687B00AD317B /* LadderWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 51FE01C4254B687B00AD317B /* Build configuration list for PBXNativeTarget "LadderWidgetExtension" */;
+			buildPhases = (
+				51FE01B4254B687B00AD317B /* Sources */,
+				51FE01B5254B687B00AD317B /* Frameworks */,
+				51FE01B6254B687B00AD317B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LadderWidgetExtension;
+			productName = LadderWidgetExtension;
+			productReference = 51FE01B8254B687B00AD317B /* LadderWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -266,6 +351,9 @@
 				LastUpgradeCheck = 1220;
 				TargetAttributes = {
 					51FE0138254B4A2800AD317B = {
+						CreatedOnToolsVersion = 12.2;
+					};
+					51FE01B7254B687B00AD317B = {
 						CreatedOnToolsVersion = 12.2;
 					};
 				};
@@ -284,6 +372,7 @@
 			projectRoot = "";
 			targets = (
 				51FE0138254B4A2800AD317B /* ladder */,
+				51FE01B7254B687B00AD317B /* LadderWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -295,6 +384,14 @@
 			files = (
 				51FE0144254B4A2A00AD317B /* Preview Assets.xcassets in Resources */,
 				51FE0141254B4A2A00AD317B /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		51FE01B6254B687B00AD317B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				51FE01BF254B687B00AD317B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -331,7 +428,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		51FE01B4254B687B00AD317B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				51FE01BD254B687B00AD317B /* LadderWidget.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		51FE01C2254B687B00AD317B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 51FE01B7254B687B00AD317B /* LadderWidgetExtension */;
+			targetProxy = 51FE01C1254B687B00AD317B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		51FE0146254B4A2A00AD317B /* Debug */ = {
@@ -453,6 +566,7 @@
 		51FE0149254B4A2A00AD317B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -475,6 +589,7 @@
 		51FE014A254B4A2A00AD317B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -489,6 +604,48 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.uninova.ladder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		51FE01C5254B687B00AD317B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WAKP43293M;
+				INFOPLIST_FILE = LadderWidget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.uninova.ladder.LadderWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		51FE01C6254B687B00AD317B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WAKP43293M;
+				INFOPLIST_FILE = LadderWidget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.uninova.ladder.LadderWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -511,6 +668,15 @@
 			buildConfigurations = (
 				51FE0149254B4A2A00AD317B /* Debug */,
 				51FE014A254B4A2A00AD317B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		51FE01C4254B687B00AD317B /* Build configuration list for PBXNativeTarget "LadderWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				51FE01C5254B687B00AD317B /* Debug */,
+				51FE01C6254B687B00AD317B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
