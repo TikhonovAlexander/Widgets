@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		517C68D8254DF96E0004EBDD /* LadderEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517C68D7254DF96E0004EBDD /* LadderEntry.swift */; };
+		517C68DC254DF98F0004EBDD /* LadderWidgetEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517C68DB254DF98F0004EBDD /* LadderWidgetEntryView.swift */; };
+		517C68E0254DF9A80004EBDD /* LadderProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517C68DF254DF9A80004EBDD /* LadderProvider.swift */; };
+		517C68EA254F14C90004EBDD /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51FE0168254B4B0000AD317B /* Profile.swift */; };
+		517C68ED254F15990004EBDD /* ProfileInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51FE016A254B4B0000AD317B /* ProfileInfoView.swift */; };
+		517C68F0254F15A60004EBDD /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51FE016B254B4B0000AD317B /* ProfileView.swift */; };
+		517C68F3254F15AC0004EBDD /* ProfileImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51FE016C254B4B0000AD317B /* ProfileImageView.swift */; };
+		517C68F6254F16210004EBDD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51FE0140254B4A2A00AD317B /* Assets.xcassets */; };
 		51FE013D254B4A2800AD317B /* ladderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51FE013C254B4A2800AD317B /* ladderApp.swift */; };
 		51FE0141254B4A2A00AD317B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51FE0140254B4A2A00AD317B /* Assets.xcassets */; };
 		51FE0144254B4A2A00AD317B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51FE0143254B4A2A00AD317B /* Preview Assets.xcassets */; };
@@ -64,6 +72,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		517C68D7254DF96E0004EBDD /* LadderEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LadderEntry.swift; sourceTree = "<group>"; };
+		517C68DB254DF98F0004EBDD /* LadderWidgetEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LadderWidgetEntryView.swift; sourceTree = "<group>"; };
+		517C68DF254DF9A80004EBDD /* LadderProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LadderProvider.swift; sourceTree = "<group>"; };
 		51FE0139254B4A2800AD317B /* ladder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ladder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		51FE013C254B4A2800AD317B /* ladderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ladderApp.swift; sourceTree = "<group>"; };
 		51FE0140254B4A2A00AD317B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -296,6 +307,9 @@
 			isa = PBXGroup;
 			children = (
 				51FE01BC254B687B00AD317B /* LadderWidget.swift */,
+				517C68DF254DF9A80004EBDD /* LadderProvider.swift */,
+				517C68DB254DF98F0004EBDD /* LadderWidgetEntryView.swift */,
+				517C68D7254DF96E0004EBDD /* LadderEntry.swift */,
 				51FE01BE254B687B00AD317B /* Assets.xcassets */,
 				51FE01C0254B687B00AD317B /* Info.plist */,
 			);
@@ -391,6 +405,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				517C68F6254F16210004EBDD /* Assets.xcassets in Resources */,
 				51FE01BF254B687B00AD317B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -432,6 +447,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				517C68F3254F15AC0004EBDD /* ProfileImageView.swift in Sources */,
+				517C68ED254F15990004EBDD /* ProfileInfoView.swift in Sources */,
+				517C68E0254DF9A80004EBDD /* LadderProvider.swift in Sources */,
+				517C68EA254F14C90004EBDD /* Profile.swift in Sources */,
+				517C68DC254DF98F0004EBDD /* LadderWidgetEntryView.swift in Sources */,
+				517C68D8254DF96E0004EBDD /* LadderEntry.swift in Sources */,
+				517C68F0254F15A60004EBDD /* ProfileView.swift in Sources */,
 				51FE01BD254B687B00AD317B /* LadderWidget.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
