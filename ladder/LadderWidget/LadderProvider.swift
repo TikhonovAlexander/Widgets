@@ -8,28 +8,33 @@
 import Foundation
 import WidgetKit
 
-struct LadderProvider: TimelineProvider {
+struct LadderProvider: IntentTimelineProvider {
     func placeholder(in context: Context) -> LadderEntry {
         LadderEntry(date: Date(), profile: sampleProfile)
     }
 
-    func getSnapshot(in context: Context, completion: @escaping (LadderEntry) -> ()) {
+    func getSnapshot(for configuration: ProfileSelectionIntent, in context: Context, completion: @escaping (LadderEntry) -> ()) {
         let entry = LadderEntry(date: Date(), profile: sampleProfile)
         completion(entry)
     }
 
-    func getTimeline(in context: Context, completion: @escaping (Timeline<LadderEntry>) -> ()) {
-        var entries: [LadderEntry] = []
-
-        // Generate a timeline consisting of five entries an hour apart, starting from the current date.
-        let currentDate = Date()
-        for hourOffset in 0 ..< 5 {
-            let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset, to: currentDate)!
-            let entry = LadderEntry(date: entryDate, profile: sampleProfile)
-            entries.append(entry)
-        }
+    func getTimeline(for configuration: ProfileSelectionIntent, in context: Context, completion: @escaping (Timeline<LadderEntry>) -> ()) {
+        let entries: [LadderEntry] = [LadderEntry(date: Date(), profile: profile(for: configuration))]
 
         let timeline = Timeline(entries: entries, policy: .atEnd)
         completion(timeline)
+    }
+
+    func profile(for configuration: ProfileSelectionIntent) -> Profile {
+        switch configuration.profile {
+        case .lina:
+        return Profile(id: 3, name: "Lina", rating: 4, score: 602.1, imageName: "lina")
+        case .morphling:
+        return Profile(id: 2, name: "Morphling", rating: 2, score: 218.8, imageName: "morphling")
+        case .bloodseeker:
+        return Profile(id: 1, name: "Bloodseeker", rating: 6, score: 312.1, imageName: "bloodseeker")
+        case .unknown:
+            return Profile(id: 3, name: "Lina", rating: 4, score: 602.1, imageName: "lina")
+        }
     }
 }
