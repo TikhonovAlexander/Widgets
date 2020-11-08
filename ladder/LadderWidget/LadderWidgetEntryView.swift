@@ -7,6 +7,7 @@
 
 import Foundation
 import SwiftUI
+import WidgetKit
 
 struct LadderWidgetEntryView: View {
     var entry: LadderProvider.Entry
@@ -20,6 +21,17 @@ struct LadderWidgetEntryView: View {
             ProfileInfoView(profile: entry.profile)
         default:
             ProfileView(profile: entry.profile)
+        }
+    }
+}
+
+struct LadderWidgetEntryView_Previews: PreviewProvider {
+    static var previews: some View {
+        Group {
+            LadderWidgetEntryView(entry: LadderEntry(date: Date(), profile: sampleProfile))
+                .previewContext(WidgetPreviewContext(family: .systemSmall))
+            LadderWidgetEntryView(entry: LadderEntry(date: Date(), profile: sampleProfile))
+                .previewContext(WidgetPreviewContext(family: .systemMedium))
         }
     }
 }
