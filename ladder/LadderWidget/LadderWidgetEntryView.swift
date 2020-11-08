@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-struct LadderWidgetEntryView : View {
+struct LadderWidgetEntryView: View {
     var entry: LadderProvider.Entry
 
     @Environment(\.widgetFamily) var family

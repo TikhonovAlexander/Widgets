@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		511C413725583EAB00DA8C70 /* LadderWidgetPlaceholderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511C413625583EAB00DA8C70 /* LadderWidgetPlaceholderView.swift */; };
 		517C68D8254DF96E0004EBDD /* LadderEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517C68D7254DF96E0004EBDD /* LadderEntry.swift */; };
 		517C68DC254DF98F0004EBDD /* LadderWidgetEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517C68DB254DF98F0004EBDD /* LadderWidgetEntryView.swift */; };
 		517C68E0254DF9A80004EBDD /* LadderProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517C68DF254DF9A80004EBDD /* LadderProvider.swift */; };
@@ -74,6 +75,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		511C413625583EAB00DA8C70 /* LadderWidgetPlaceholderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LadderWidgetPlaceholderView.swift; sourceTree = "<group>"; };
 		517C68D7254DF96E0004EBDD /* LadderEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LadderEntry.swift; sourceTree = "<group>"; };
 		517C68DB254DF98F0004EBDD /* LadderWidgetEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LadderWidgetEntryView.swift; sourceTree = "<group>"; };
 		517C68DF254DF9A80004EBDD /* LadderProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LadderProvider.swift; sourceTree = "<group>"; };
@@ -311,6 +313,7 @@
 			children = (
 				51FE01BC254B687B00AD317B /* LadderWidget.swift */,
 				517C68DF254DF9A80004EBDD /* LadderProvider.swift */,
+				511C413625583EAB00DA8C70 /* LadderWidgetPlaceholderView.swift */,
 				517C68DB254DF98F0004EBDD /* LadderWidgetEntryView.swift */,
 				517C68D7254DF96E0004EBDD /* LadderEntry.swift */,
 				517C68F9254F56510004EBDD /* LadderIntents.intentdefinition */,
@@ -458,6 +461,7 @@
 				517C68EA254F14C90004EBDD /* Profile.swift in Sources */,
 				517C68FA254F56510004EBDD /* LadderIntents.intentdefinition in Sources */,
 				517C68DC254DF98F0004EBDD /* LadderWidgetEntryView.swift in Sources */,
+				511C413725583EAB00DA8C70 /* LadderWidgetPlaceholderView.swift in Sources */,
 				517C68D8254DF96E0004EBDD /* LadderEntry.swift in Sources */,
 				517C68F0254F15A60004EBDD /* ProfileView.swift in Sources */,
 				51FE01BD254B687B00AD317B /* LadderWidget.swift in Sources */,
