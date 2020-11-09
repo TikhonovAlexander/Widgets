@@ -274,8 +274,8 @@
 		51FE0169254B4B0000AD317B /* view */ = {
 			isa = PBXGroup;
 			children = (
-				51FE016A254B4B0000AD317B /* ProfileInfoView.swift */,
 				51FE016B254B4B0000AD317B /* ProfileView.swift */,
+				51FE016A254B4B0000AD317B /* ProfileInfoView.swift */,
 				51FE016C254B4B0000AD317B /* ProfileImageView.swift */,
 			);
 			path = view;

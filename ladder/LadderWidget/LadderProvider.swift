@@ -14,16 +14,36 @@ struct LadderProvider: IntentTimelineProvider {
     }
 
     func getSnapshot(for configuration: ProfileSelectionIntent, in context: Context, completion: @escaping (LadderEntry) -> ()) {
-        let entry = LadderEntry(date: Date(), profile: sampleProfile)
-        completion(entry)
+        if context.isPreview {
+            let entry = LadderEntry(date: Date(), profile: sampleProfile)
+            completion(entry)
+        } else {
+            // it takes a few seconds to fetch the data
+            let profile = self.profile(for: configuration)
+            let entry = LadderEntry(date: Date(), profile: profile)
+            completion(entry)
+        }
     }
 
     func getTimeline(for configuration: ProfileSelectionIntent, in context: Context, completion: @escaping (Timeline<LadderEntry>) -> ()) {
-        let entries: [LadderEntry] = [LadderEntry(date: Date(), profile: profile(for: configuration))]
+        let profile = self.profile(for: configuration)
+        var entries: [LadderEntry] = [LadderEntry(date: Date(), profile: profile)]
+
+        let threeSeconds: TimeInterval = 3
+        var currentDate = Date()
+        let endDate = Calendar.current.date(byAdding: .minute, value: 1, to: currentDate)!
+        while currentDate < endDate {
+            let newScore = Double.random(in: 150...200)
+            let newProfile = Profile(id: profile.id, name: profile.name, rating: profile.rating, score: newScore, imageName: profile.imageName)
+            let entry = LadderEntry(date: currentDate, profile: newProfile)
+            entries.append(entry)
+            currentDate += threeSeconds
+        }
 
         let timeline = Timeline(entries: entries, policy: .atEnd)
         completion(timeline)
     }
+
 
     func profile(for configuration: ProfileSelectionIntent) -> Profile {
         switch configuration.profile {
