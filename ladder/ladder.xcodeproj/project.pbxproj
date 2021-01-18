@@ -18,6 +18,9 @@
 		517C68F6254F16210004EBDD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51FE0140254B4A2A00AD317B /* Assets.xcassets */; };
 		517C68FA254F56510004EBDD /* LadderIntents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 517C68F9254F56510004EBDD /* LadderIntents.intentdefinition */; };
 		517C6911254F5E500004EBDD /* LadderIntents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 517C68F9254F56510004EBDD /* LadderIntents.intentdefinition */; };
+		51DD0A0B25B6234E00997451 /* NewsWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51DD0A0A25B6234E00997451 /* NewsWidget.swift */; };
+		51DD0A0C25B6234E00997451 /* NewsWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51DD0A0A25B6234E00997451 /* NewsWidget.swift */; };
+		51DD0A1325B623EF00997451 /* WidgetsBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51DD0A1225B623EF00997451 /* WidgetsBundle.swift */; };
 		51FE013D254B4A2800AD317B /* ladderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51FE013C254B4A2800AD317B /* ladderApp.swift */; };
 		51FE0141254B4A2A00AD317B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51FE0140254B4A2A00AD317B /* Assets.xcassets */; };
 		51FE0144254B4A2A00AD317B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51FE0143254B4A2A00AD317B /* Preview Assets.xcassets */; };
@@ -80,6 +83,8 @@
 		517C68DB254DF98F0004EBDD /* LadderWidgetEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LadderWidgetEntryView.swift; sourceTree = "<group>"; };
 		517C68DF254DF9A80004EBDD /* LadderProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LadderProvider.swift; sourceTree = "<group>"; };
 		517C68F9254F56510004EBDD /* LadderIntents.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = LadderIntents.intentdefinition; sourceTree = "<group>"; };
+		51DD0A0A25B6234E00997451 /* NewsWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsWidget.swift; sourceTree = "<group>"; };
+		51DD0A1225B623EF00997451 /* WidgetsBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetsBundle.swift; sourceTree = "<group>"; };
 		51FE0139254B4A2800AD317B /* ladder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ladder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		51FE013C254B4A2800AD317B /* ladderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ladderApp.swift; sourceTree = "<group>"; };
 		51FE0140254B4A2A00AD317B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -135,6 +140,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		51DD09CF25B622FF00997451 /* News */ = {
+			isa = PBXGroup;
+			children = (
+				51DD0A0A25B6234E00997451 /* NewsWidget.swift */,
+			);
+			path = News;
+			sourceTree = "<group>";
+		};
+		51DD0A1125B623DB00997451 /* Ladder */ = {
+			isa = PBXGroup;
+			children = (
+				51FE01BC254B687B00AD317B /* LadderWidget.swift */,
+				517C68DF254DF9A80004EBDD /* LadderProvider.swift */,
+				511C413625583EAB00DA8C70 /* LadderWidgetPlaceholderView.swift */,
+				517C68DB254DF98F0004EBDD /* LadderWidgetEntryView.swift */,
+				517C68D7254DF96E0004EBDD /* LadderEntry.swift */,
+			);
+			path = Ladder;
+			sourceTree = "<group>";
+		};
 		51FE0130254B4A2800AD317B = {
 			isa = PBXGroup;
 			children = (
@@ -311,12 +336,10 @@
 		51FE01BB254B687B00AD317B /* LadderWidget */ = {
 			isa = PBXGroup;
 			children = (
-				51FE01BC254B687B00AD317B /* LadderWidget.swift */,
-				517C68DF254DF9A80004EBDD /* LadderProvider.swift */,
-				511C413625583EAB00DA8C70 /* LadderWidgetPlaceholderView.swift */,
-				517C68DB254DF98F0004EBDD /* LadderWidgetEntryView.swift */,
-				517C68D7254DF96E0004EBDD /* LadderEntry.swift */,
+				51DD0A1125B623DB00997451 /* Ladder */,
+				51DD09CF25B622FF00997451 /* News */,
 				517C68F9254F56510004EBDD /* LadderIntents.intentdefinition */,
+				51DD0A1225B623EF00997451 /* WidgetsBundle.swift */,
 				51FE01BE254B687B00AD317B /* Assets.xcassets */,
 				51FE01C0254B687B00AD317B /* Info.plist */,
 			);
@@ -427,6 +450,7 @@
 				51FE0185254B4B0000AD317B /* KeychainStore.swift in Sources */,
 				51FE013D254B4A2800AD317B /* ladderApp.swift in Sources */,
 				51FE0177254B4B0000AD317B /* ProfilesReducer.swift in Sources */,
+				51DD0A0B25B6234E00997451 /* NewsWidget.swift in Sources */,
 				51FE0173254B4B0000AD317B /* ProfilesState.swift in Sources */,
 				51FE017F254B4B0000AD317B /* ContainerProfileView.swift in Sources */,
 				51FE0181254B4B0000AD317B /* ProfileInfoView.swift in Sources */,
@@ -455,8 +479,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51DD0A0C25B6234E00997451 /* NewsWidget.swift in Sources */,
 				517C68F3254F15AC0004EBDD /* ProfileImageView.swift in Sources */,
 				517C68ED254F15990004EBDD /* ProfileInfoView.swift in Sources */,
+				51DD0A1325B623EF00997451 /* WidgetsBundle.swift in Sources */,
 				517C68E0254DF9A80004EBDD /* LadderProvider.swift in Sources */,
 				517C68EA254F14C90004EBDD /* Profile.swift in Sources */,
 				517C68FA254F56510004EBDD /* LadderIntents.intentdefinition in Sources */,

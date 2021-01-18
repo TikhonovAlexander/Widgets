@@ -8,7 +8,6 @@
 import WidgetKit
 import SwiftUI
 
-@main
 struct LadderWidget: Widget {
     let kind: String = "LadderWidget"
 
