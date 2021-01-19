@@ -12,7 +12,7 @@ struct LadderWidget: Widget {
     let kind: String = "LadderWidget"
 
     var body: some WidgetConfiguration {
-        IntentConfiguration(kind: kind, intent: ProfileSelectionIntent.self, provider: LadderProvider()) { entry in
+        IntentConfiguration(kind: kind, intent: DynamicProfileSelectionIntent.self, provider: LadderProvider()) { entry in
             LadderWidgetEntryView(entry: entry)
         }
         .configurationDisplayName("My Widget")

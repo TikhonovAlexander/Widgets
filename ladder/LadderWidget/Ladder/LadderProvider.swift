@@ -9,11 +9,12 @@ import Foundation
 import WidgetKit
 
 struct LadderProvider: IntentTimelineProvider {
+
     func placeholder(in context: Context) -> LadderEntry {
         LadderEntry(date: Date(), profile: sampleProfile)
     }
 
-    func getSnapshot(for configuration: ProfileSelectionIntent, in context: Context, completion: @escaping (LadderEntry) -> ()) {
+    func getSnapshot(for configuration: DynamicProfileSelectionIntent, in context: Context, completion: @escaping (LadderEntry) -> ()) {
         if context.isPreview {
             let entry = LadderEntry(date: Date(), profile: sampleProfile)
             completion(entry)
@@ -25,7 +26,7 @@ struct LadderProvider: IntentTimelineProvider {
         }
     }
 
-    func getTimeline(for configuration: ProfileSelectionIntent, in context: Context, completion: @escaping (Timeline<LadderEntry>) -> ()) {
+    func getTimeline(for configuration: DynamicProfileSelectionIntent, in context: Context, completion: @escaping (Timeline<LadderEntry>) -> ()) {
         let profile = self.profile(for: configuration)
         var entries: [LadderEntry] = [LadderEntry(date: Date(), profile: profile)]
 
@@ -45,15 +46,16 @@ struct LadderProvider: IntentTimelineProvider {
     }
 
 
-    func profile(for configuration: ProfileSelectionIntent) -> Profile {
-        switch configuration.profile {
-        case .lina:
+    func profile(for configuration: DynamicProfileSelectionIntent) -> Profile {
+        let id = configuration.profileType?.identifier.flatMap { Int($0) } ?? 1
+        switch id {
+        case 3:
         return Profile(id: 3, name: "Lina", rating: 4, score: 602.1, imageName: "lina")
-        case .morphling:
+        case 2:
         return Profile(id: 2, name: "Morphling", rating: 2, score: 218.8, imageName: "morphling")
-        case .bloodseeker:
+        case 1:
         return Profile(id: 1, name: "Bloodseeker", rating: 6, score: 312.1, imageName: "bloodseeker")
-        case .unknown:
+        default:
             return Profile(id: 3, name: "Lina", rating: 4, score: 602.1, imageName: "lina")
         }
     }

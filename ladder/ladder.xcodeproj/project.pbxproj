@@ -21,6 +21,11 @@
 		51DD0A0B25B6234E00997451 /* NewsWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51DD0A0A25B6234E00997451 /* NewsWidget.swift */; };
 		51DD0A0C25B6234E00997451 /* NewsWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51DD0A0A25B6234E00997451 /* NewsWidget.swift */; };
 		51DD0A1325B623EF00997451 /* WidgetsBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51DD0A1225B623EF00997451 /* WidgetsBundle.swift */; };
+		51F9909E25B6E7FD0095F075 /* Intents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51F9909D25B6E7FD0095F075 /* Intents.framework */; };
+		51F990A125B6E7FD0095F075 /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F990A025B6E7FD0095F075 /* IntentHandler.swift */; };
+		51F990A525B6E7FD0095F075 /* LadderWidgetIntent.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 51F9909C25B6E7FD0095F075 /* LadderWidgetIntent.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		51F990AD25B6E9840095F075 /* DynamicLadderIntents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 51F990AC25B6E9840095F075 /* DynamicLadderIntents.intentdefinition */; };
+		51F990B725B6ED480095F075 /* DynamicLadderIntents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 51F990AC25B6E9840095F075 /* DynamicLadderIntents.intentdefinition */; };
 		51FE013D254B4A2800AD317B /* ladderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51FE013C254B4A2800AD317B /* ladderApp.swift */; };
 		51FE0141254B4A2A00AD317B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51FE0140254B4A2A00AD317B /* Assets.xcassets */; };
 		51FE0144254B4A2A00AD317B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51FE0143254B4A2A00AD317B /* Preview Assets.xcassets */; };
@@ -54,6 +59,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		51F990A325B6E7FD0095F075 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 51FE0131254B4A2800AD317B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 51F9909B25B6E7FD0095F075;
+			remoteInfo = LadderWidgetIntent;
+		};
 		51FE01C1254B687B00AD317B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 51FE0131254B4A2800AD317B /* Project object */;
@@ -70,6 +82,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
+				51F990A525B6E7FD0095F075 /* LadderWidgetIntent.appex in Embed App Extensions */,
 				51FE01C3254B687B00AD317B /* LadderWidgetExtension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
@@ -85,6 +98,11 @@
 		517C68F9254F56510004EBDD /* LadderIntents.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = LadderIntents.intentdefinition; sourceTree = "<group>"; };
 		51DD0A0A25B6234E00997451 /* NewsWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsWidget.swift; sourceTree = "<group>"; };
 		51DD0A1225B623EF00997451 /* WidgetsBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetsBundle.swift; sourceTree = "<group>"; };
+		51F9909C25B6E7FD0095F075 /* LadderWidgetIntent.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = LadderWidgetIntent.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		51F9909D25B6E7FD0095F075 /* Intents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Intents.framework; path = System/Library/Frameworks/Intents.framework; sourceTree = SDKROOT; };
+		51F990A025B6E7FD0095F075 /* IntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentHandler.swift; sourceTree = "<group>"; };
+		51F990A225B6E7FD0095F075 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		51F990AC25B6E9840095F075 /* DynamicLadderIntents.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = DynamicLadderIntents.intentdefinition; sourceTree = "<group>"; };
 		51FE0139254B4A2800AD317B /* ladder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ladder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		51FE013C254B4A2800AD317B /* ladderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ladderApp.swift; sourceTree = "<group>"; };
 		51FE0140254B4A2A00AD317B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -121,6 +139,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		51F9909925B6E7FD0095F075 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				51F9909E25B6E7FD0095F075 /* Intents.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		51FE0136254B4A2800AD317B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -160,11 +186,22 @@
 			path = Ladder;
 			sourceTree = "<group>";
 		};
+		51F9909F25B6E7FD0095F075 /* LadderWidgetIntent */ = {
+			isa = PBXGroup;
+			children = (
+				51F990A025B6E7FD0095F075 /* IntentHandler.swift */,
+				51F990AC25B6E9840095F075 /* DynamicLadderIntents.intentdefinition */,
+				51F990A225B6E7FD0095F075 /* Info.plist */,
+			);
+			path = LadderWidgetIntent;
+			sourceTree = "<group>";
+		};
 		51FE0130254B4A2800AD317B = {
 			isa = PBXGroup;
 			children = (
 				51FE013B254B4A2800AD317B /* ladder */,
 				51FE01BB254B687B00AD317B /* LadderWidget */,
+				51F9909F25B6E7FD0095F075 /* LadderWidgetIntent */,
 				51FE019F254B667A00AD317B /* Frameworks */,
 				51FE013A254B4A2800AD317B /* Products */,
 			);
@@ -175,6 +212,7 @@
 			children = (
 				51FE0139254B4A2800AD317B /* ladder.app */,
 				51FE01B8254B687B00AD317B /* LadderWidgetExtension.appex */,
+				51F9909C25B6E7FD0095F075 /* LadderWidgetIntent.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -329,6 +367,7 @@
 			children = (
 				51FE01A0254B667A00AD317B /* WidgetKit.framework */,
 				51FE01A2254B667A00AD317B /* SwiftUI.framework */,
+				51F9909D25B6E7FD0095F075 /* Intents.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -349,6 +388,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		51F9909B25B6E7FD0095F075 /* LadderWidgetIntent */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 51F990A825B6E7FD0095F075 /* Build configuration list for PBXNativeTarget "LadderWidgetIntent" */;
+			buildPhases = (
+				51F9909825B6E7FD0095F075 /* Sources */,
+				51F9909925B6E7FD0095F075 /* Frameworks */,
+				51F9909A25B6E7FD0095F075 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LadderWidgetIntent;
+			productName = LadderWidgetIntent;
+			productReference = 51F9909C25B6E7FD0095F075 /* LadderWidgetIntent.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		51FE0138254B4A2800AD317B /* ladder */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 51FE0148254B4A2A00AD317B /* Build configuration list for PBXNativeTarget "ladder" */;
@@ -362,6 +418,7 @@
 			);
 			dependencies = (
 				51FE01C2254B687B00AD317B /* PBXTargetDependency */,
+				51F990A425B6E7FD0095F075 /* PBXTargetDependency */,
 			);
 			name = ladder;
 			productName = ladder;
@@ -391,9 +448,12 @@
 		51FE0131254B4A2800AD317B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1220;
+				LastSwiftUpdateCheck = 1230;
 				LastUpgradeCheck = 1220;
 				TargetAttributes = {
+					51F9909B25B6E7FD0095F075 = {
+						CreatedOnToolsVersion = 12.3;
+					};
 					51FE0138254B4A2800AD317B = {
 						CreatedOnToolsVersion = 12.2;
 					};
@@ -417,11 +477,19 @@
 			targets = (
 				51FE0138254B4A2800AD317B /* ladder */,
 				51FE01B7254B687B00AD317B /* LadderWidgetExtension */,
+				51F9909B25B6E7FD0095F075 /* LadderWidgetIntent */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		51F9909A25B6E7FD0095F075 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		51FE0137254B4A2800AD317B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -443,6 +511,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		51F9909825B6E7FD0095F075 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				51F990AD25B6E9840095F075 /* DynamicLadderIntents.intentdefinition in Sources */,
+				51F990A125B6E7FD0095F075 /* IntentHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		51FE0135254B4A2800AD317B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -482,6 +559,7 @@
 				51DD0A0C25B6234E00997451 /* NewsWidget.swift in Sources */,
 				517C68F3254F15AC0004EBDD /* ProfileImageView.swift in Sources */,
 				517C68ED254F15990004EBDD /* ProfileInfoView.swift in Sources */,
+				51F990B725B6ED480095F075 /* DynamicLadderIntents.intentdefinition in Sources */,
 				51DD0A1325B623EF00997451 /* WidgetsBundle.swift in Sources */,
 				517C68E0254DF9A80004EBDD /* LadderProvider.swift in Sources */,
 				517C68EA254F14C90004EBDD /* Profile.swift in Sources */,
@@ -497,6 +575,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		51F990A425B6E7FD0095F075 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 51F9909B25B6E7FD0095F075 /* LadderWidgetIntent */;
+			targetProxy = 51F990A325B6E7FD0095F075 /* PBXContainerItemProxy */;
+		};
 		51FE01C2254B687B00AD317B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 51FE01B7254B687B00AD317B /* LadderWidgetExtension */;
@@ -505,6 +588,46 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		51F990A625B6E7FD0095F075 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WAKP43293M;
+				INFOPLIST_FILE = LadderWidgetIntent/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.uninova.ladder.LadderWidgetIntent;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		51F990A725B6E7FD0095F075 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WAKP43293M;
+				INFOPLIST_FILE = LadderWidgetIntent/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.uninova.ladder.LadderWidgetIntent;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		51FE0146254B4A2A00AD317B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -712,6 +835,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		51F990A825B6E7FD0095F075 /* Build configuration list for PBXNativeTarget "LadderWidgetIntent" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				51F990A625B6E7FD0095F075 /* Debug */,
+				51F990A725B6E7FD0095F075 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		51FE0134254B4A2800AD317B /* Build configuration list for PBXProject "ladder" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
