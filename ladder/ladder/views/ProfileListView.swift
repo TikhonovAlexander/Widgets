@@ -16,10 +16,6 @@ struct ProfileListView: View {
         store.state.profilesState.profiles.map { $0.value }
     }
 
-    @State private var showingReadAlert = false
-    @State private var showingStoreAlert = false
-    @State private var secret: String?
-
     @ViewBuilder
     var body: some View {
         NavigationView {
@@ -29,24 +25,6 @@ struct ProfileListView: View {
                 }
             }
             .navigationBarTitle(Text("Profiles"))
-            .navigationBarItems(trailing:
-                                    HStack {
-                                        Button("Store") {
-                                            _ = KeychainStore.roundTrip("My Secret")
-                                            showingStoreAlert = true
-                                        }
-                                        .alert(isPresented: $showingStoreAlert) {
-                                            Alert(title: Text("key saved"))
-                                        }
-                                        Button("Read") {
-                                            secret = KeychainStore.read()
-                                            showingReadAlert = true
-                                        }
-                                        .alert(isPresented: $showingReadAlert) {
-                                            Alert(title: Text(secret ?? "key not saved"))
-                                        }
-                                    }
-            )
         }.onAppear {
             fetchProfiles()
         }
